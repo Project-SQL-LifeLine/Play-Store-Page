@@ -420,16 +420,18 @@
             e.preventDefault();
         });
 
-        // Download Button Logic
-        const downloadUrl = "app-release.apk"; // APK file link here
+        // ⚠️ আপনার MediaFire ডিরেক্ট লিংক এখানে বসানো হয়েছে
+        const downloadUrl = "https://www.mediafire.com/download/kj3woi5t80tregj/lotto-dhaka.apk"; 
         
         document.getElementById('downloadBtn').addEventListener('click', function(e) {
             e.preventDefault();
+            // সরাসরি ডাউনলোড শুরু হবে
             window.location.href = downloadUrl;
         });
 
         document.getElementById('stickyDownloadBtn').addEventListener('click', function(e) {
             e.preventDefault();
+            // সরাসরি ডাউনলোড শুরু হবে
             window.location.href = downloadUrl;
         });
     </script>
