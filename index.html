@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LuckyDraw - Download App</title>
+    <title>Lotto Dhaka - Download App</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
@@ -230,6 +230,12 @@
         .user-review {
             border-top: 1px solid var(--border-color);
             padding: 15px 0;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .review-header {
@@ -298,11 +304,11 @@
     <div class="container">
         <!-- App Header -->
         <div class="app-header">
-            <!-- আপনার দেওয়া অ্যাপ আইকনের লিংক এখানে বসানো হয়েছে -->
             <img src="https://project-sql-lifeline.github.io/Play-Store-Page/apps-icon.png" alt="App Icon" class="app-icon">
             <div class="app-info">
-                <h1>Lucky Draw 666</h1>
-                <p>LuckyDraw.Com</p>
+                <!-- নাম পরিবর্তন করা হয়েছে -->
+                <h1>Lotto Dhaka</h1>
+                <p>Lotto Dhaka Bangladesh</p>
                 <p class="verified-text">App Verified</p>
             </div>
         </div>
@@ -331,7 +337,6 @@
 
         <!-- Screenshots -->
         <div class="screenshots">
-            <!-- এখানে আপনার স্ক্রিনশটের লিংক দিবেন -->
             <img src="https://placehold.co/300x500/183f35/FFF?text=Jackpot+1M" alt="Screenshot 1">
             <img src="https://placehold.co/300x500/183f35/FFF?text=Daily+Bonus" alt="Screenshot 2">
             <img src="https://placehold.co/300x500/183f35/FFF?text=Win+Real+Cash" alt="Screenshot 3">
@@ -367,73 +372,141 @@
                 </div>
             </div>
 
-            <!-- Review 1: Miguel -->
-            <div class="user-review">
-                <div class="review-header">
-                    <img src="https://xp3ec4r6j3a.com/images/download/reviews/br-1.jpeg" class="user-avatar" alt="Miguel">
-                    <div>
-                        <div style="font-weight: 600; font-size: 14px;">Miguel</div>
-                        <div class="review-stars">★★★★★</div>
+            <!-- Dynamic Reviews Container -->
+            <div id="reviews-container">
+                <!-- Initial Reviews (These will be at the top and new ones will be added below/above) -->
+                <div class="user-review">
+                    <div class="review-header">
+                        <img src="https://xp3ec4r6j3a.com/images/download/reviews/br-1.jpeg" class="user-avatar" alt="Miguel">
+                        <div>
+                            <div style="font-weight: 600; font-size: 14px;">Miguel</div>
+                            <div class="review-stars">★★★★★</div>
+                        </div>
+                        <div class="review-date">March 7, 2026</div>
                     </div>
-                    <div class="review-date">March 7, 2026</div>
+                    <div class="review-text">Fun games with huge bonuses. The withdrawal option works very fast.</div>
                 </div>
-                <div class="review-text">Fun games with huge bonuses. The withdrawal option works very fast.</div>
-            </div>
 
-            <!-- Review 2: Jose -->
-            <div class="user-review">
-                <div class="review-header">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH91Xwslt3oWH0H_W9lBspZv-lkUJWws6YgGmwWNyIDppQX24bMv2igseW&s=10" class="user-avatar" alt="Jose">
-                    <div>
-                        <div style="font-weight: 600; font-size: 14px;">Jose</div>
-                        <div class="review-stars">★★★★★</div>
+                <div class="user-review">
+                    <div class="review-header">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH91Xwslt3oWH0H_W9lBspZv-lkUJWws6YgGmwWNyIDppQX24bMv2igseW&s=10" class="user-avatar" alt="Jose">
+                        <div>
+                            <div style="font-weight: 600; font-size: 14px;">Jose</div>
+                            <div class="review-stars">★★★★★</div>
+                        </div>
+                        <div class="review-date">January 5, 2026</div>
                     </div>
-                    <div class="review-date">January 5, 2026</div>
+                    <div class="review-text">Very fun casual game, you can also earn money from it.</div>
                 </div>
-                <div class="review-text">Very fun casual game, you can also earn money from it.</div>
-            </div>
-            
-            <!-- Review 3: Arik -->
-            <div class="user-review">
-                <div class="review-header">
-                    <img src="https://xp3ec4r6j3a.com/images/download/reviews/br-2.jpeg" class="user-avatar" alt="Arik">
-                    <div>
-                        <div style="font-weight: 600; font-size: 14px;">Arik</div>
-                        <div class="review-stars">★★★★☆</div>
+                
+                <div class="user-review">
+                    <div class="review-header">
+                        <img src="https://xp3ec4r6j3a.com/images/download/reviews/br-2.jpeg" class="user-avatar" alt="Arik">
+                        <div>
+                            <div style="font-weight: 600; font-size: 14px;">Arik</div>
+                            <div class="review-stars">★★★★☆</div>
+                        </div>
+                        <div class="review-date">February 2, 2026</div>
                     </div>
-                    <div class="review-date">February 2, 2026</div>
+                    <div class="review-text">The game is good, but withdrawals take a little time. Overall gameplay is amazing.</div>
                 </div>
-                <div class="review-text">The game is good, but withdrawals take a little time. Overall gameplay is amazing.</div>
             </div>
         </div>
     </div>
 
     <!-- Fixed Bottom Download Button -->
     <div class="sticky-download">
-        <!-- Set your actual APK download link here -->
         <a href="#" id="stickyDownloadBtn">Download APK</a>
     </div>
 
     <script>
-        // Prevent Right Click on the entire page for extra security
+        // Prevent Right Click
         document.addEventListener('contextmenu', function(e) {
             e.preventDefault();
         });
 
-        // ⚠️ আপনার GitHub ডিরেক্ট ডাউনলোড লিংক এখানে বসানো হয়েছে
-        const downloadUrl = "https://github.com/Project-SQL-LifeLine/Play-Store-Page/releases/download/Lotto-Dhaka/lotto-dhaka.apk"; 
+        // ⚠️ আপনার নতুন GitHub ডিরেক্ট ডাউনলোড লিংক এখানে বসানো হয়েছে
+        const downloadUrl = "https://github.com/Project-SQL-LifeLine/Play-Store-Page/releases/download/Lotto-Dhaka02/lotto-dhaka.apk"; 
         
         document.getElementById('downloadBtn').addEventListener('click', function(e) {
             e.preventDefault();
-            // সরাসরি ডাউনলোড শুরু হবে
             window.location.href = downloadUrl;
         });
 
         document.getElementById('stickyDownloadBtn').addEventListener('click', function(e) {
             e.preventDefault();
-            // সরাসরি ডাউনলোড শুরু হবে
             window.location.href = downloadUrl;
         });
+
+        // ==========================================
+        // ডাইনামিক রিভিউ যোগ করার স্ক্রিপ্ট (প্রতি ২-৫ সেকেন্ডে)
+        // ==========================================
+        
+        const names = ["Rahim", "Karim", "Sabbir", "Tanvir", "Fahim", "Nayeem", "Rifat", "Hasan", "Mahmud", "Sakib", "Jamil", "Rony", "Anik", "Shakil", "Arman"];
+        const comments = [
+            "Best lottery app in Bangladesh! Withdrawal is super fast.",
+            "I got my bonus instantly. Highly recommended!",
+            "Very easy to play and win. Love this app.",
+            "Customer support is very helpful. 5 stars!",
+            "I won 500 taka today! Amazing app.",
+            "Trusted platform. Never had an issue with withdrawal.",
+            "The daily bonus is great. Keep up the good work.",
+            "Superb graphics and smooth gameplay.",
+            "Best app for earning some extra cash.",
+            "Bkash withdrawal is instant. Just wow!",
+            "I play daily. It's very addictive and fun.",
+            "Refer your friends and get commission. Works perfectly.",
+            "Secure and safe. No fake promises.",
+            "The best lottery game I have ever played.",
+            "Got my welcome bonus of 500 BDT easily."
+        ];
+        
+        // ব্ল্যাক-হোয়াইট অ্যাভাটার জেনারেট করার ফাংশন (র‍্যান্ডম ইউজারদের জন্য)
+        function getRandomAvatar(name) {
+            return `https://ui-avatars.com/api/?name=${name}&background=random&color=fff&size=100`;
+        }
+
+        function addRandomReview() {
+            const reviewsContainer = document.getElementById('reviews-container');
+            const randomName = names[Math.floor(Math.random() * names.length)];
+            const randomComment = comments[Math.floor(Math.random() * comments.length)];
+            const avatarUrl = getRandomAvatar(randomName);
+            
+            // র‍্যান্ডম ডেট জেনারেট (আজকের দিন থেকে সাম্প্রতিক)
+            const today = new Date();
+            const options = { year: 'numeric', month: 'short', day: 'numeric' };
+            const randomDate = today.toLocaleDateString('en-US', options);
+
+            // নতুন রিভিউ HTML তৈরি
+            const newReview = document.createElement('div');
+            newReview.className = 'user-review';
+            newReview.innerHTML = `
+                <div class="review-header">
+                    <img src="${avatarUrl}" class="user-avatar" alt="${randomName}">
+                    <div>
+                        <div style="font-weight: 600; font-size: 14px;">${randomName}</div>
+                        <div class="review-stars">★★★★★</div>
+                    </div>
+                    <div class="review-date">${randomDate}</div>
+                </div>
+                <div class="review-text">${randomComment}</div>
+            `;
+
+            // নতুন রিভিউটি সবার উপরে যুক্ত হবে
+            reviewsContainer.insertBefore(newReview, reviewsContainer.firstChild);
+
+            // মেমোরি বাঁচানোর জন্য পুরোনো রিভিউ ডিলিট করা (সর্বোচ্চ ১০টি থাকবে)
+            if (reviewsContainer.children.length > 10) {
+                reviewsContainer.removeChild(reviewsContainer.lastChild);
+            }
+
+            // পরবর্তী রিভিউ কখন আসবে তা র‍্যান্ডমলি ঠিক করা (২ থেকে ৫ সেকেন্ড)
+            const nextTime = Math.floor(Math.random() * (5000 - 2000 + 1)) + 2000;
+            setTimeout(addRandomReview, nextTime);
+        }
+
+        // প্রথম রিভিউটি ২ সেকেন্ড পর শুরু হবে
+        setTimeout(addRandomReview, 2000);
     </script>
 </body>
 </html>
