@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LuckyDraw - Download App</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
         :root {
             --primary-green: #00875A;
@@ -19,13 +19,17 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Hind Siliguri', sans-serif;
+            font-family: 'Roboto', sans-serif;
         }
 
         body {
             background-color: var(--bg-color);
             color: var(--text-main);
             padding-bottom: 80px; /* For fixed button */
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
 
         .container {
@@ -49,6 +53,7 @@
             border-radius: 15px;
             object-fit: cover;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            pointer-events: none; /* Prevents right click/save */
         }
 
         .app-info h1 {
@@ -61,6 +66,12 @@
             font-size: 14px;
             color: var(--primary-green);
             font-weight: 500;
+        }
+
+        .verified-text {
+            color: #666; 
+            font-size: 12px; 
+            margin-top: 4px;
         }
 
         /* Stats Row */
@@ -150,6 +161,7 @@
             border-radius: 10px;
             object-fit: cover;
             border: 1px solid var(--border-color);
+            pointer-events: none; /* Prevents right click/save */
         }
 
         /* About Section */
@@ -233,6 +245,7 @@
             border-radius: 50%;
             background-color: #ccc;
             object-fit: cover;
+            pointer-events: none; /* Prevents right click/save */
         }
 
         .review-date {
@@ -285,12 +298,12 @@
     <div class="container">
         <!-- App Header -->
         <div class="app-header">
-            <!-- এখানে আপনার আসল অ্যাপ আইকনের লিংক দিবেন -->
+            <!-- Replace the placeholder with your actual app icon URL -->
             <img src="https://placehold.co/150x150/183f35/FFF?text=Lucky" alt="App Icon" class="app-icon">
             <div class="app-info">
                 <h1>Lucky Draw 666</h1>
                 <p>LuckyDraw.Com</p>
-                <p style="color: #666; font-size: 12px; margin-top: 4px;">অ্যাপ যাচাই হয়েছে</p>
+                <p class="verified-text">App Verified</p>
             </div>
         </div>
 
@@ -298,52 +311,52 @@
         <div class="stats-row">
             <div class="stat-item">
                 <div class="stat-value">4.9 <span class="star-icon">★</span></div>
-                <div class="stat-label">২,৯১০৩৭ রেটিং</div>
+                <div class="stat-label">291,037 Reviews</div>
             </div>
             <div class="stat-item">
                 <div class="stat-value">500K+</div>
-                <div class="stat-label">ডাউনলোড</div>
+                <div class="stat-label">Downloads</div>
             </div>
             <div class="stat-item">
                 <div class="stat-value">18+</div>
-                <div class="stat-label">বয়সসীমা</div>
+                <div class="stat-label">Age Limit</div>
             </div>
         </div>
 
         <!-- Main Download Button -->
         <a href="#" class="download-btn" id="downloadBtn">
-            ⚡ দ্রুত ইনস্টল
-            <span>১৫ সেকেন্ডে ডাউনলোড</span>
+            ⚡ Fast Install
+            <span>15 Seconds Download</span>
         </a>
 
         <!-- Screenshots -->
         <div class="screenshots">
-            <!-- এখানে আপনার লটারি অ্যাপের স্ক্রিনশটের লিংক দিবেন -->
+            <!-- Replace these placeholders with your actual screenshot URLs -->
             <img src="https://placehold.co/300x500/183f35/FFF?text=Jackpot+1M" alt="Screenshot 1">
             <img src="https://placehold.co/300x500/183f35/FFF?text=Daily+Bonus" alt="Screenshot 2">
             <img src="https://placehold.co/300x500/183f35/FFF?text=Win+Real+Cash" alt="Screenshot 3">
         </div>
 
         <!-- About Section -->
-        <div class="section-title">এই অ্যাপ সম্পর্কে</div>
+        <div class="section-title">About this App</div>
         <div class="about-text">
-🔥 ৪.৯ স্টার রেটিং, লাইভ লটারি এবং ক্যাশ আউট গেমের সেরা প্ল্যাটফর্ম!
-💎 <b>স্বাগতম বোনাস:</b> নতুন ইউজারদের জন্য ৫০০ টাকা ফ্রি বোনাস!
-💰 <b>দৈনিক রিওয়ার্ড:</b> প্রতিদিন লগইন করে জিতুন ৭৭ টাকা পর্যন্ত।
-💸 <b>মিনিমাম উইথড্র:</b> মাত্র ২০০ টাকা।
-🤑 <b>রেফার এন্ড আর্ন:</b> বন্ধুদের ইনভাইট করে পান ৫০ টাকা পর্যন্ত কমিশন।
-🔒 ১০০% নিরাপদ এবং বিশ্বস্ত প্ল্যাটফর্ম। ২৪/৭ কাস্টমার সাপোর্ট।
+🔥 4.9 Star Rating, the best platform for live lottery and cash-out games!
+💎 <b>Welcome Bonus:</b> Get 500 BDT free bonus for new users!
+💰 <b>Daily Reward:</b> Log in daily and win up to 77 BDT.
+💸 <b>Minimum Withdraw:</b> Only 200 BDT.
+🤑 <b>Refer & Earn:</b> Invite your friends and get up to 50 BDT commission.
+🔒 100% Safe & Trusted platform. 24/7 Customer Support.
         </div>
 
         <!-- Reviews Section -->
         <div class="review-section">
-            <div class="section-title">রেটিং এবং রিভিউ</div>
+            <div class="section-title">Ratings & Reviews</div>
             
             <div class="rating-summary">
                 <div style="text-align: center;">
                     <div class="big-rating">4.9</div>
                     <div class="review-stars" style="font-size: 16px;">★★★★★</div>
-                    <div style="font-size: 12px; color: #666; margin-top: 5px;">২,৯১০৩৭</div>
+                    <div style="font-size: 12px; color: #666; margin-top: 5px;">291,037</div>
                 </div>
                 <div class="rating-bars">
                     <div class="rating-bar-row"><span>5</span><div class="bar-bg"><div class="bar-fill" style="width: 90%;"></div></div></div>
@@ -354,67 +367,69 @@
                 </div>
             </div>
 
-            <!-- Review 1 -->
+            <!-- Review 1: Miguel -->
             <div class="user-review">
                 <div class="review-header">
-                    <img src="https://placehold.co/100x100/EEE/333?text=M" class="user-avatar" alt="User">
+                    <img src="https://xp3ec4r6j3a.com/images/download/reviews/br-1.jpeg" class="user-avatar" alt="Miguel">
                     <div>
-                        <div style="font-weight: 600; font-size: 14px;">মিগুয়েল</div>
+                        <div style="font-weight: 600; font-size: 14px;">Miguel</div>
                         <div class="review-stars">★★★★★</div>
                     </div>
-                    <div class="review-date">৭ মার্চ, ২০২৬</div>
+                    <div class="review-date">March 7, 2026</div>
                 </div>
-                <div class="review-text">বিশাল বোনাস সহ মজাদার গেম। উইথড্র অপশন খুব ফাস্ট কাজ করে।</div>
+                <div class="review-text">Fun games with huge bonuses. The withdrawal option works very fast.</div>
             </div>
 
-            <!-- Review 2 -->
+            <!-- Review 2: Jose -->
             <div class="user-review">
                 <div class="review-header">
-                    <img src="https://placehold.co/100x100/EEE/333?text=H" class="user-avatar" alt="User">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH91Xwslt3oWH0H_W9lBspZv-lkUJWws6YgGmwWNyIDppQX24bMv2igseW&s=10" class="user-avatar" alt="Jose">
                     <div>
-                        <div style="font-weight: 600; font-size: 14px;">হোসে</div>
+                        <div style="font-weight: 600; font-size: 14px;">Jose</div>
                         <div class="review-stars">★★★★★</div>
                     </div>
-                    <div class="review-date">৫ জানুয়ারি, ২০২৬</div>
+                    <div class="review-date">January 5, 2026</div>
                 </div>
-                <div class="review-text">খুবই মজাদার ক্যাজুয়াল গেম, আপনি অর্থও উপার্জন করতে পারেন।</div>
+                <div class="review-text">Very fun casual game, you can also earn money from it.</div>
             </div>
             
-            <!-- Review 3 -->
+            <!-- Review 3: Arik -->
             <div class="user-review">
                 <div class="review-header">
-                    <img src="https://placehold.co/100x100/EEE/333?text=A" class="user-avatar" alt="User">
+                    <img src="https://xp3ec4r6j3a.com/images/download/reviews/br-2.jpeg" class="user-avatar" alt="Arik">
                     <div>
-                        <div style="font-weight: 600; font-size: 14px;">আরিফ</div>
+                        <div style="font-weight: 600; font-size: 14px;">Arik</div>
                         <div class="review-stars">★★★★☆</div>
                     </div>
-                    <div class="review-date">২ ফেব্রুয়ারি, ২০২৬</div>
+                    <div class="review-date">February 2, 2026</div>
                 </div>
-                <div class="review-text">গেমটি ভালো, তবে উইথড্র করতে একটু সময় লাগে। ওভারঅল গেমপ্লে অসাধারণ।</div>
+                <div class="review-text">The game is good, but withdrawals take a little time. Overall gameplay is amazing.</div>
             </div>
         </div>
     </div>
 
     <!-- Fixed Bottom Download Button -->
     <div class="sticky-download">
-        <!-- এখানে আপনার আসল APK ফাইলের ডাউনলোড লিংক দিবেন -->
+        <!-- Set your actual APK download link here -->
         <a href="#" id="stickyDownloadBtn">Download APK</a>
     </div>
 
     <script>
-        // ডাউনলোড বাটনে ক্লিক করলে যা হবে তা এখানে সেট করুন
-        // আপনি চাইলে এখানে আপনার APK ফাইলের ডাইরেক্ট লিংক দিতে পারেন
-        const downloadUrl = "app-release.apk"; // APK ফাইলের নাম বা লিংক দিন
+        // Prevent Right Click on the entire page for extra security
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        // Download Button Logic
+        const downloadUrl = "app-release.apk"; // APK file link here
         
         document.getElementById('downloadBtn').addEventListener('click', function(e) {
             e.preventDefault();
-            // এখানে ডাউনলোড লজিক
             window.location.href = downloadUrl;
         });
 
         document.getElementById('stickyDownloadBtn').addEventListener('click', function(e) {
             e.preventDefault();
-            // এখানে ডাউনলোড লজিক
             window.location.href = downloadUrl;
         });
     </script>
